@@ -32,22 +32,22 @@ const Crew = () => {
                     {crewMembers.douglas && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[0].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[0].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[0].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-lg'>{crew[0].bio}</p>
                     </div>}
                     {crewMembers.mark && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[1].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[1].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[1].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-lg'>{crew[1].bio}</p>
                     </div>}
                     {crewMembers.victor && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[2].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[2].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[2].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-lg'>{crew[2].bio}</p>
                     </div>}
                     {crewMembers.ansari && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[3].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[3].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[3].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-lg'>{crew[3].bio}</p>
                     </div>}
 
                     <div className='flex flex-row gap-5 justify-center sm:mt-5 lg:justify-start lg:ml-24 lg:mt-20'>
@@ -124,12 +124,12 @@ const Crew = () => {
                         />}
                         {crewMembers.victor && <img 
                             src={crew[2].images}
-                            className='h-400 flex justify-center lg:h-460'
+                            className='crewPic h-400 flex justify-center lg:h-460 lg:mr-5'
                             alt='crew-pic'
                         />}
                         {crewMembers.ansari && <img 
                             src={crew[3].images}
-                            className='h-400 flex justify-center lg:h-460'
+                            className='crewPic2 h-400 flex justify-center lg:h-460'
                             alt='crew-pic'
                         />}
                         <div className='hr-crew'></div>

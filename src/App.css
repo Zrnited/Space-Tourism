@@ -225,4 +225,12 @@ body.active {
     background-position: center;
     height: 100vh;
   }
+
+  .crewPic {
+    min-width: 340px;
+  }
+
+  .crewPic2 {
+    min-width: 382px;
+  }
 }

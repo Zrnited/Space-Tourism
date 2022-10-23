@@ -71,22 +71,22 @@ const Destination = () => {
                     {moon && <img
                         src={destinations[0].images}
                         alt='planet-img'
-                        className='w-175 sm:w-300 md:w-300 lg:w-445'
+                        className='w-175 sm:w-300 md:w-300 lg:w-4/5'
                     />}
                     {mars && <img
                         src={destinations[1].images}
                         alt='planet-img'
-                        className='w-175 sm:w-300 md:w-300 lg:w-445'
+                        className='w-175 sm:w-300 md:w-300 lg:w-4/5'
                     />}
                     {europa && <img
                         src={destinations[2].images}
                         alt='planet-img'
-                        className='w-175 sm:w-300 md:w-300 lg:w-445'
+                        className='w-175 sm:w-300 md:w-300 lg:w-4/5'
                     />}
                     {titan && <img
                         src={destinations[3].images}
                         alt='planet-img'
-                        className='w-175 sm:w-300 md:w-300 lg:w-445'
+                        className='w-175 sm:w-300 md:w-300 lg:w-4/5'
                     />}
                 </div>
             </div>
@@ -220,7 +220,7 @@ const Destination = () => {
                 {moon && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[0].name}</h1>
-                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[0].description}</p>
+                        <p className='text-custom text-sm px-2 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[0].description}</p>
                     </div>
 
                     <div className='hr'></div>
@@ -239,7 +239,7 @@ const Destination = () => {
                 {mars && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[1].name}</h1>
-                        <p className='text-custom text-sm px-6 text-center mt-4 sm:text-base sm:px-32 lg:w-444 lg:text-left lg:px-0'>{destinations[1].description}</p>
+                        <p className='text-custom text-sm px-6 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-32 lg:w-444 lg:text-left lg:px-0'>{destinations[1].description}</p>
                     </div>
 
                     <div className='hr'></div>
@@ -258,7 +258,7 @@ const Destination = () => {
                 {europa && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[2].name}</h1>
-                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[2].description}</p>
+                        <p className='text-custom text-sm px-2 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[2].description}</p>
                     </div>
 
                     <div className='hr'></div>
@@ -277,7 +277,7 @@ const Destination = () => {
                 {titan && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[3].name}</h1>
-                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base sm:px-24 lg:w-444 lg:text-left lg:px-0'>{destinations[3].description}</p>
+                        <p className='text-custom text-sm px-2 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-24 lg:w-444 lg:text-left lg:px-0'>{destinations[3].description}</p>
                     </div>
 
                     <div className='hr'></div>

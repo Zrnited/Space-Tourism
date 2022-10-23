@@ -99,22 +99,22 @@ const Tech = () => {
                     {techImage.launch && <img 
                         src={innerWidth ? technology[0].images.portrait : technology[0].images.landscape}
                         alt='tech-pic'
-                        className='w-full lg:w-515 mr-0'
+                        className='w-full lg:w-5/6 mr-0'
                     />}
                     {techImage.spaceCapsule && <img 
                         src={innerWidth ? technology[1].images.portrait : technology[1].images.landscape}
                         alt='tech-pic'
-                        className='w-full lg:w-515 mr-0'
+                        className='w-full lg:w-5/6 mr-0'
                     />}
                     {techImage.spacePort && <img 
                         src={innerWidth ? technology[2].images.portrait : technology[2].images.landscape}
                         alt='tech-pic'
-                        className='w-full lg:w-515 mr-0'
+                        className='w-full lg:w-5/6 mr-0'
                     />}
                 </div>
 
-                <div className='flex flex-col gap-5 lg:flex-row lg:items-center  lg:justify-center lg:gap-8 xl:gap-12'>
-                    <div className='flex flex-row gap-4 w-full justify-center lg:flex-col lg:ml-5'>
+                <div className='flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-center lg:gap-8 xl:gap-12'>
+                    <div className='flex flex-row gap-4 w-full justify-center lg:flex-col lg:ml-5 lg:gap-7'>
                         <div 
                             className={!techImage.launch ? 'w-40 h-40 rounded-full flex items-center text-white justify-center cursor-pointer border-custom border-solid border opacity-50 hover:opacity-75 hover:bg-white hover:text-black hover:font-bold transition ease-in delay-100 lg:w-80 lg:h-80 lg:text-2xl' : 'w-40 h-40 bg-white rounded-full flex items-center cursor-pointer justify-center font-bold lg:w-80 lg:h-80 lg:text-2xl'}
                             onClick={changeTechDetails}
@@ -132,17 +132,17 @@ const Tech = () => {
                     {techImage.launch && <div className='flex flex-col text-center gap-2 sm:items-center lg:items-start'>
                         <p className='uppercase text-sm text-custom tracking-widest lg:text-xl'>the terminology...</p>
                         <h1 className='uppercase text-white text-2xl tracking-widest lg:text-5xl'>{technology[0].name}</h1>
-                        <p className='text-custom px-6 mt-3 sm:px-0 sm:w-458 lg:text-left lg:text-lg'>{technology[0].description}</p>
+                        <p className='text-custom px-6 mt-3 sm:px-0 sm:w-458 lg:text-left lg:text-base'>{technology[0].description}</p>
                     </div>}
                     {techImage.spaceCapsule && <div className='flex flex-col text-center gap-2 sm:items-center lg:items-start'>
                         <p className='uppercase text-sm text-custom tracking-widest lg:text-xl'>the terminology...</p>
                         <h1 className='uppercase text-white text-2xl tracking-widest lg:text-5xl'>{technology[1].name}</h1>
-                        <p className='text-custom px-6 mt-3 sm:px-0 sm:w-458 lg:text-left lg:text-lg'>{technology[1].description}</p>
+                        <p className='text-custom px-6 mt-3 sm:px-0 sm:w-458 lg:text-left lg:text-base'>{technology[1].description}</p>
                     </div>}
                     {techImage.spacePort && <div className='flex flex-col text-center gap-2 sm:items-center lg:items-start'>
                         <p className='uppercase text-sm text-custom tracking-widest lg:text-xl'>the terminology...</p>
                         <h1 className='uppercase text-white text-2xl tracking-widest lg:text-5xl'>{technology[2].name}</h1>
-                        <p className='text-custom px-6 mt-3 sm:px-0 sm:w-458 lg:text-left lg:text-lg'>{technology[2].description}</p>
+                        <p className='text-custom px-6 mt-3 sm:px-0 sm:w-458 lg:text-left lg:text-base'>{technology[2].description}</p>
                     </div>}
                 </div>
             </div>
