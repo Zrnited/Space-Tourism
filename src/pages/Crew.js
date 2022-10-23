@@ -6,6 +6,7 @@ import { crew } from '../components/crewdata';
 const Crew = () => {
 
     const [sidebar, setSidebar] = useState(false);
+    const crewBar = true;
 
     const [crewMembers, setCrewMembers] = useState({
         douglas: true,
@@ -14,9 +15,10 @@ const Crew = () => {
         ansari: false
     })
 
+
   return (
     <div className='crew-bg h-screen h-full'>
-        <Navbar sidebar={sidebar} setSidebar={setSidebar} />
+        <Navbar crewBar={crewBar} sidebar={sidebar} setSidebar={setSidebar} />
 
         <div className='flex flex-col justify-between sm:justify-between sm:flex sm:flex-col'>
             {/* SMALL/MEDIUM DEVICES */}
@@ -25,27 +27,27 @@ const Crew = () => {
             </div>
 
             {/* MEDIUM DEVICES */}
-            <div className='hidden sm:block lg:flex lg:flex-row lg:items-center lg:justify-center '>
+            <div className='hidden sm:block lg:flex lg:flex-row lg:items-center lg:justify-evenly '>
                 <div>
                     {crewMembers.douglas && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[0].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[0].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left'>{crew[0].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[0].bio}</p>
                     </div>}
                     {crewMembers.mark && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[1].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[1].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left'>{crew[1].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[1].bio}</p>
                     </div>}
                     {crewMembers.victor && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[2].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[2].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left'>{crew[2].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[2].bio}</p>
                     </div>}
                     {crewMembers.ansari && <div className='flex flex-col items-center w-full px-8 text-center mt-5 hidden sm:block sm:justify-center sm:items-center sm:flex sm:flex-col lg:items-start lg:ml-16'>
                         <p className='text-custom uppercase tracking-widest text opacity-75 sm:text-xl sm:mb-2 lg:text-2xl'>{crew[3].role}</p>
                         <h1 className='text-white text-2xl uppercase tracking-3 sm:text-4xl lg:text-5xl'>{crew[3].name}</h1>
-                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left'>{crew[3].bio}</p>
+                        <p className='text-custom text-sm mt-4 tracking-wide leading-relaxed sm:text-lg sm:w-3/4 lg:text-left lg:text-xl'>{crew[3].bio}</p>
                     </div>}
 
                     <div className='flex flex-row gap-5 justify-center sm:mt-5 lg:justify-start lg:ml-24 lg:mt-20'>

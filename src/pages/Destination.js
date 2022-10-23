@@ -4,6 +4,8 @@ import { destinations } from '../components/desdata';
 
 const Destination = () => {
     const [sidebar, setSidebar] = useState(false);
+    const destinationBar = true;
+    const [fixedNavBar, setfixedNavBar] = useState(false);
 
     //interaction
 
@@ -45,14 +47,25 @@ const Destination = () => {
         }
     }
 
+    //fixed
+    const setFixed = ()=>{
+        if(window.scrollY > 70) {
+            setfixedNavBar(true);
+        } else {
+            setfixedNavBar(false)
+        }
+    }
+
+    window.addEventListener('scroll', setFixed)
+
 
   return (
     <div className='destination-bg h-screen h-full'>
-        <Navbar sidebar={sidebar} setSidebar={setSidebar}/>
+        <Navbar fixed={fixedNavBar} destinationBar={destinationBar} sidebar={sidebar} setSidebar={setSidebar}/>
 
         <div className='flex flex-col lg:flex-row lg:items-center justify-evenly'>
             <div className='flex flex-col items-center gap-10 mt-10 sm:items-start'>
-                <p className='text-white text-center text-lg sm:ml-10 lg:text-28 lg:mb-5 lg:tracking-widest'> <span className='text-custom'>01</span> PICK YOUR DESTINATION</p>
+                <p className='text-white text-center tracking-widest text-lg sm:ml-10 lg:text-28 lg:mb-5 lg:tracking-widest'> <span className='text-custom'>01</span> PICK YOUR DESTINATION</p>
 
                 <div className='flex justify-center w-full'>
                     {moon && <img
@@ -82,7 +95,7 @@ const Destination = () => {
                 <div className='flex flex-row gap-4 justify-center items-center sm:gap-8 lg:justify-start'>
                     <div className='w-auto flex-flex-col gap-3 items-center justify-center lg:items-start'>
                         <p 
-                        onClick={handleClick} className='uppercase text-custom hover:text-white tracking-widest text-center hover:cursor-pointer text-sm sm:text-xl md:text-xl'
+                        onClick={handleClick} className='uppercase text-custom hover:text-white tracking-widest text-center hover:cursor-pointer transition ease-in-out delay-100 text-sm sm:text-xl md:text-xl'
                         onMouseOver={(e)=>{
                            const currentItem = e.target.textContent
                            if(currentItem === 'Moon'){
@@ -110,7 +123,7 @@ const Destination = () => {
                         >
                             {destinations[0].name}
                         </p>
-                        {bars.moon && <div className='moon-bar'></div>}
+                        {bars.moon && <div className='moon-bar transition ease-in-out delay-100'></div>}
                     </div>
                     <div className='w-auto flex-flex-col gap-3 items-center justify-center'>
                         <p 
@@ -207,7 +220,7 @@ const Destination = () => {
                 {moon && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[0].name}</h1>
-                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base lg:w-444 lg:text-left'>{destinations[0].description}</p>
+                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[0].description}</p>
                     </div>
 
                     <div className='hr'></div>
@@ -226,7 +239,7 @@ const Destination = () => {
                 {mars && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[1].name}</h1>
-                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base lg:w-444 lg:text-left'>{destinations[1].description}</p>
+                        <p className='text-custom text-sm px-6 text-center mt-4 sm:text-base sm:px-32 lg:w-444 lg:text-left lg:px-0'>{destinations[1].description}</p>
                     </div>
 
                     <div className='hr'></div>
@@ -245,7 +258,7 @@ const Destination = () => {
                 {europa && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[2].name}</h1>
-                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base lg:w-444 lg:text-left'>{destinations[2].description}</p>
+                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[2].description}</p>
                     </div>
 
                     <div className='hr'></div>
@@ -264,7 +277,7 @@ const Destination = () => {
                 {titan && <div className='flex flex-col gap-5 items-center'>
                     <div>
                         <h1 className='text-6xl uppercase text-white text-center tracking-widest mt-5 sm:text-8xl lg:text-left'>{destinations[3].name}</h1>
-                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base lg:w-444 lg:text-left'>{destinations[3].description}</p>
+                        <p className='text-custom text-sm px-2 text-center mt-4 sm:text-base sm:px-24 lg:w-444 lg:text-left lg:px-0'>{destinations[3].description}</p>
                     </div>
 
                     <div className='hr'></div>
