@@ -29,7 +29,7 @@ const Home = () => {
                 <p className='intro leading-wide pt-5 text-white text-sm sm:text-base sm:mt-4 sm:w-3/4 lg:text-left lg:w-3/ lg:text-xl lg:leading-relaxed'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
             </div>
 
-            <button className='explore-btn bg-white tracking-widest h-36 w-36 text-xl rounded-full font-bold sm:mt-20 sm:h-44 sm:w-44 lg:h-72 lg:w-72 lg:text-2xl'>
+            <button className='explore-btn bg-white tracking-3 h-36 w-36 text-base rounded-full font-bold sm:text-xl sm:mt-20 sm:h-44 sm:w-44 lg:h-72 lg:w-72 lg:text-2xl'>
                 <Link to={'/destination'}>
                     EXPLORE
                 </Link>    

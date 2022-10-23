@@ -4,6 +4,7 @@ import { destinations } from '../components/desdata';
 
 const Destination = () => {
     const [sidebar, setSidebar] = useState(false);
+    console.log(sidebar)
     const destinationBar = true;
     const [fixedNavBar, setfixedNavBar] = useState(false);
 
@@ -64,7 +65,7 @@ const Destination = () => {
         <Navbar fixed={fixedNavBar} destinationBar={destinationBar} sidebar={sidebar} setSidebar={setSidebar}/>
 
         <div className='flex flex-col lg:flex-row lg:items-center justify-evenly'>
-            <div className='flex flex-col items-center gap-10 mt-10 sm:items-start'>
+            <div className='flex flex-col items-center gap-10 mt-10 sm:items-start lg:flex lg:gap-12 lg:items-center'>
                 <p className='text-white text-center tracking-widest text-lg sm:ml-10 lg:text-28 lg:mb-5 lg:tracking-widest'> <span className='text-custom'>01</span> PICK YOUR DESTINATION</p>
 
                 <div className='flex justify-center w-full'>
@@ -91,7 +92,7 @@ const Destination = () => {
                 </div>
             </div>
 
-            <div className='py-7 px-5'>
+            <div className='py-7 px-5 lg:mt-36'>
                 <div className='flex flex-row gap-4 justify-center items-center sm:gap-8 lg:justify-start'>
                     <div className='w-auto flex-flex-col gap-3 items-center justify-center lg:items-start'>
                         <p 
@@ -223,7 +224,7 @@ const Destination = () => {
                         <p className='text-custom text-sm px-2 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[0].description}</p>
                     </div>
 
-                    <div className='hr'></div>
+                    <div className={!sidebar ? 'hr' : 'hr hide'}></div>
 
                     <div className='w-full flex flex-col sm:flex-row items-center sm:justify-evenly lg:justify-start lg:gap-10'>
                         <div className='flex flex-col items-center lg:items-start'>
@@ -242,7 +243,7 @@ const Destination = () => {
                         <p className='text-custom text-sm px-6 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-32 lg:w-444 lg:text-left lg:px-0'>{destinations[1].description}</p>
                     </div>
 
-                    <div className='hr'></div>
+                    <div className={!sidebar ? 'hr' : 'hr hide'}></div>
 
                     <div className='w-full flex flex-col sm:flex-row items-center sm:justify-evenly lg:justify-start lg:gap-10'>
                         <div className='flex flex-col items-center lg:items-start'>
@@ -261,7 +262,7 @@ const Destination = () => {
                         <p className='text-custom text-sm px-2 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-16 lg:w-444 lg:text-left lg:px-0'>{destinations[2].description}</p>
                     </div>
 
-                    <div className='hr'></div>
+                    <div className={!sidebar ? 'hr' : 'hr hide'}></div>
 
                     <div className='w-full flex flex-col sm:flex-row items-center sm:justify-evenly lg:justify-start lg:gap-10'>
                         <div className='flex flex-col items-center lg:items-start'>
@@ -280,7 +281,7 @@ const Destination = () => {
                         <p className='text-custom text-sm px-2 text-center mt-4 leading-5 sm:leading-normal sm:text-base sm:px-24 lg:w-444 lg:text-left lg:px-0'>{destinations[3].description}</p>
                     </div>
 
-                    <div className='hr'></div>
+                    <div className={!sidebar ? 'hr' : 'hr hide'}></div>
 
                     <div className='w-full flex flex-col sm:flex-row items-center sm:justify-evenly lg:justify-start lg:gap-10'>
                         <div className='flex flex-col items-center lg:items-start'>
